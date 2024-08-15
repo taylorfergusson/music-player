@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox minWidth="250.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.musicplayer.controller.LibraryController">
+   <children>
+      <TextField fx:id="searchBox" styleClass="search-box" focusTraversable="false" maxHeight="-Infinity" minHeight="-Infinity" onKeyTyped="#searchTextChanged" onMouseClicked="#searchBoxClicked" prefHeight="35.0" promptText="Search" VBox.vgrow="NEVER">
+         <VBox.margin>
+            <Insets bottom="12.0" left="12.0" top="8.0" />
+         </VBox.margin></TextField>
+      <Label styleClass="h2" text="Library">
+         <VBox.margin>
+            <Insets bottom="4.0" left="16.0" right="12.0" top="12.0" />
+         </VBox.margin></Label>
+      <ListView fx:id="libraryListView" minHeight="100.0" onMouseClicked="#libraryItemClicked" prefHeight="100.0" prefWidth="200.0">
+         <VBox.margin>
+            <Insets left="12.0" />
+         </VBox.margin></ListView>
+      <Label styleClass="h2" text="Playlists">
+         <VBox.margin>
+            <Insets bottom="4.0" left="16.0" right="12.0" top="12.0" />
+         </VBox.margin></Label>
+      <ListView fx:id="playlistListView" onMouseClicked="#playlistItemClicked" prefHeight="200.0" prefWidth="200.0">
+         <VBox.margin>
+            <Insets left="12.0" />
+         </VBox.margin></ListView>
+      <Region prefHeight="200.0" prefWidth="200.0" />
+      <ImageView fx:id="artworkImageView" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

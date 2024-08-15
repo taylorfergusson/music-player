@@ -1,0 +1,161 @@
+* {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-family: 'Helvetica';
+}
+
+.main-background {
+    -fx-background-color: rgb(100, 100, 100);
+}
+
+.black-overlay {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+}
+
+.search-box {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-prompt-text-fill: white;
+}
+
+.playlist-name-text-field {
+    -fx-background-color: rgba(0,0,0,0.3);
+    -fx-padding: 0;
+}
+
+.list-cell:selected {
+    -fx-background-color: rgba(0,0,0,0.1);
+}
+
+.table-view {
+    -fx-font-size: 14px;
+}
+
+
+.table-view .column-header {
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-alignment: CENTER-LEFT;
+}
+
+.table-view .table-column {
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(0,0,0,0.1);
+}
+
+/* .table-row-cell:hover {
+    -fx-background-color: rgba(0,0,0,0.05);
+} */
+
+.album-overlay {
+    -fx-background-color: rgba(0,0,0,0.4);
+}
+
+.album-play-button {
+
+}
+
+/* album page */
+.album-title {
+    -fx-font-size: 44px;
+    -fx-font-weight: bold;
+    -fx-padding: 4px 0;
+}
+
+.album-artist {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-padding: 4px 0;
+}
+
+.album-info {
+    -fx-font-size: 14px;
+    -fx-padding: 4px 0;
+}
+
+.album-button {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+}
+
+.album-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.4);
+}
+
+.album-table-view .label {
+    -fx-padding: 12px 8px;
+}
+
+.album-table-view .table-cell{
+    -fx-padding: 12px;
+}
+
+
+/* artist page */
+/* .artists-list-view {
+    -fx-font-size: 16px;
+} */
+
+.artist-name {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.artist-album {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.queue-vbox {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+    -fx-background-radius: 4 0 0 0;
+    -fx-border-color: rgba(0, 0, 0, 0.9);
+    -fx-border-width: 2px 0 0 2px;   /* Border width */
+    -fx-border-radius: 4 0 0 0; /* Border radius */
+}
+
+
+
+
+
+/* Customize the thumb of the vertical scrollbar */
+.scroll-bar .thumb {
+    -fx-background-color: rgba(0,0,0,0.1); /* Set the background color of the thumb */
+}
+
+.menu-item {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+.menu-item:hover {
+    -fx-background-color: rgba(0, 0, 0);
+}
+
+.icon-button {
+    -fx-opacity: 0.95;
+    -fx-transition: -fx-opacity 0.3s
+}
+
+.icon-button:hover {
+    -fx-opacity: 0.7;
+}
+
+.slider .track {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-background-radius: 5; /* Rounded corners */
+    -fx-pref-height: 5; /* Set the height of the track */
+}
+
+.slider .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-padding: 3;
+}
+
+
+
+.alert-vbox {
+    -fx-background-color: rgb(0, 0, 0);
+}

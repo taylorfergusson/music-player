@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.musicplayer.controller.MainController">
+   <children>
+      <Region prefHeight="200.0" prefWidth="200.0" styleClass="main-background" />
+      <ImageView fx:id="backgroundImageView" fitHeight="2000.0" fitWidth="2000.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+         <effect>
+            <BoxBlur height="85.0" iterations="2" width="80.0" />
+         </effect></ImageView>
+      <Region prefHeight="200.0" prefWidth="200.0" styleClass="black-overlay" />
+      <BorderPane>
+         <top>
+            <fx:include source="MenuBar.fxml" />
+         </top>
+         <left>
+            <fx:include source="Library.fxml" />
+         </left>
+         <center>
+            <StackPane BorderPane.alignment="CENTER">
+               <children>
+                  <fx:include source="Search.fxml" />
+                  <fx:include source="Artists.fxml" />
+                  <fx:include source="Albums.fxml" />
+                  <fx:include source="AlbumPage.fxml" />
+                  <fx:include source="Songs.fxml" />
+                  <fx:include source="Playlist.fxml" />
+                  <fx:include source="Queue.fxml" />
+               </children>
+               <BorderPane.margin>
+                  <Insets left="20.0" />
+               </BorderPane.margin></StackPane>
+         </center>
+         <bottom>
+            <fx:include source="Playback.fxml" />
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>

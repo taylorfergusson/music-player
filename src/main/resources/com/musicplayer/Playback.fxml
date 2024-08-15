@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<HBox fx:id="playbackBar" prefHeight="85.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.musicplayer.controller.PlaybackController">
+   <children>
+      <VBox alignment="CENTER_LEFT" prefWidth="225.0">
+         <children>
+            <Label fx:id="songTitleLabel" styleClass="h1">
+               <VBox.margin>
+                  <Insets bottom="4.0" />
+               </VBox.margin></Label>
+            <Label fx:id="songArtistLabel" styleClass="h3" />
+         </children>
+      </VBox>
+      <Region HBox.hgrow="ALWAYS" />
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ToggleButton fx:id="shuffleButton" mnemonicParsing="false" onAction="#shuffleClicked" styleClass="icon-button">
+                     <graphic>
+                        <ImageView fx:id="shuffleImage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </ToggleButton>
+                  <Button fx:id="rewindButton" mnemonicParsing="false" onAction="#rewindClicked" styleClass="icon-button">
+                     <graphic>
+                        <ImageView fx:id="rewindImage" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </Button>
+                  <ToggleButton fx:id="playPauseButton" mnemonicParsing="false" onAction="#playPauseClicked" styleClass="icon-button">
+                     <graphic>
+                        <ImageView fx:id="playPauseImage" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </ToggleButton>
+                  <Button fx:id="fastForwardButton" mnemonicParsing="false" onAction="#fastForwardClicked" styleClass="icon-button">
+                     <graphic>
+                        <ImageView fx:id="fastForwardImage" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="repeatButton" mnemonicParsing="false" onAction="#repeatClicked" styleClass="icon-button">
+                     <graphic>
+                        <ImageView fx:id="repeatImage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="songPositionLabel" text="0:00">
+                     <HBox.margin>
+                        <Insets right="4.0" />
+                     </HBox.margin></Label>
+                  <Slider fx:id="songPositionSlider" blockIncrement="1.0" maxWidth="500.0" minWidth="300.0" prefWidth="500.0" />
+                  <Label fx:id="songEndLabel" text="-:--">
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets bottom="8.0" top="8.0" />
+         </HBox.margin>
+      </VBox>
+      <Region HBox.hgrow="ALWAYS" />
+      <HBox alignment="CENTER_RIGHT" prefWidth="200.0">
+         <children>
+            <ToggleButton fx:id="queueButton" mnemonicParsing="false" onAction="#showOrHideQueue" styleClass="icon-button">
+               <graphic>
+                  <ImageView fx:id="queueImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </ToggleButton>
+            <Button fx:id="speakerButton" mnemonicParsing="false" onAction="#volumeDown" styleClass="icon-button">
+               <graphic>
+                  <ImageView fx:id="speakerImage" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Slider fx:id="volumeSlider" blockIncrement="0.1" max="1.0" prefWidth="100.0" value="1.0" />
+            <Button fx:id="loudSpeakerButton" mnemonicParsing="false" onAction="#volumeUp" styleClass="icon-button">
+               <graphic>
+                  <ImageView fx:id="loudSpeakerImage" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets left="16.0" right="16.0" />
+   </padding>
+</HBox>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.musicplayer.controller.AlbumItemController">
+   <children>
+      <StackPane onMouseClicked="#goToAlbum" onMouseEntered="#showPlayButton" onMouseExited="#hidePlayButton" prefHeight="250.0" prefWidth="250.0">
+         <children>
+            <ImageView fx:id="albumCover" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
+            <Region fx:id="overlay" prefHeight="250.0" prefWidth="250.0" styleClass="album-overlay" visible="false" />
+            <ToggleButton fx:id="playPauseButton" mnemonicParsing="false" onAction="#playOrPauseAlbum" visible="false">
+               <graphic>
+                  <ImageView fx:id="playPauseImage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </ToggleButton>
+         </children>
+      </StackPane>
+      <Label fx:id="albumTitle" text="Unknown Album" />
+      <Label fx:id="albumArtistName" text="Unknown Artist" />
+   </children>
+</VBox>

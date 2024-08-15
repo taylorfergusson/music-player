@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane fx:id="albumPage" fitToWidth="true" visible="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.musicplayer.controller.AlbumPageController">
+   <content>
+      <VBox fx:id="albumPageVBox" >
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onMouseClicked="#showAlbumScrollPane">
+               <graphic>
+                  <HBox alignment="CENTER" spacing="4.0">
+                     <children>
+                        <ImageView fx:id="backImageView" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label text="Albums" />
+                     </children>
+                  </HBox>
+               </graphic>
+            </Button>
+            <HBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="250.0" spacing="50.0" VBox.vgrow="NEVER">
+               <children>
+                  <ImageView fx:id="albumArtworkImageView" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS" />
+                  <VBox alignment="BOTTOM_LEFT">
+                     <children>
+                        <Label fx:id="albumTitleLabel" graphicTextGap="0.0" styleClass="album-title" text="Unknown Album" />
+                        <Label fx:id="albumArtistNameLabel" graphicTextGap="0.0" styleClass="album-artist" text="Unknown Artist" />
+                        <HBox styleClass="album-info">
+                           <children>
+                              <Label fx:id="albumGenreLabel" graphicTextGap="0.0" />
+                              <Label fx:id="albumYearLabel" graphicTextGap="0.0" />
+                              <Label fx:id="albumSongNumberLabel" graphicTextGap="0.0" />
+                              <Label fx:id="albumLengthLabel" graphicTextGap="0.0" />
+                           </children>
+                        </HBox>
+                        <Region prefHeight="75.0" />
+                        <HBox spacing="10.0">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#playAlbum" styleClass="album-button">
+                                 <graphic>
+                                    <HBox alignment="CENTER" spacing="4.0">
+                                       <children>
+                                          <ImageView fx:id="playAlbumImageView" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Label text="Play Album" />
+                                       </children>
+                                    </HBox>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </content>
+   <StackPane.margin>
+      <Insets left="20.0" top="8.0" />
+   </StackPane.margin>
+</ScrollPane>
