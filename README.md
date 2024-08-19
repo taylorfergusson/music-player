@@ -18,7 +18,7 @@ A full-stack music player application built with JavaFX and FXML. This applicati
 Executable file will be available soon.
 
 ## Application Example
-![Demo Example Video](https://raw.githubusercontent.com/taylorfergusson/music-player/musicplayerexample.gif "Demo Example Video")
+![Demo Example Video](https://raw.githubusercontent.com/taylorfergusson/music-player/master/musicplayerexample.gif "Demo Example Video")
 
 ## Contact
 
